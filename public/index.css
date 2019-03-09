@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Comfortaa';
+    src:  url('../fonts/comfortaa-base.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../fonts/comfortaa-ext.woff2') format('woff2');
+}
+html {
+    height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+    padding: 0;
+	background: linear-gradient(0deg, rgba(70,130,180,1) 0%, rgba(176,196,222,1) 100%);
+    color: black;
+    overflow: hidden;
+    font-family: 'Comfortaa';
+}
+#board{
+    border:1px solid #c3c3c3;
+    float: left;
+}
+.right{
+    float: left;
+    width: calc(100% - 1002px);
+    height: 100%;
+}
+.inputs{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    float: left;
+    padding:20px;
+    background: burlywood;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.inputs-form{
+    width: 100%;
+    margin: 0 auto;
+}
+.inputs button{
+    float: right;
+}
+.inputs-form input{
+    margin: 10px;
+    font-size: 16px;
+}
