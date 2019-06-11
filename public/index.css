@@ -15,7 +15,6 @@ body {
     padding: 0;
 	background: linear-gradient(0deg, rgba(70,130,180,1) 0%, rgba(176,196,222,1) 100%);
     color: black;
-    overflow: hidden;
     font-family: 'Comfortaa';
 }
 #board{
@@ -24,33 +23,69 @@ body {
 }
 .right{
     float: left;
-    width: 300px;
+    width: 600px;
     height: 100%;
 }
+.controler{
+    margin: 0 auto;
+    background-color: #e7cdab;
+    border-radius: 10px;
+}
 .inputs{
-    width: 300px;
+    width: 600px;
     box-sizing: border-box;
     border: 1px solid black;
-    float: left;
+    display: flex;
     padding:20px;
     background: burlywood;
-    border-radius: 10px;
     margin: 0 auto;
 }
 .inputs button{
-    float: right;
-    width: 250px;
+    width: 100%;
+    height: 50px;
     font-size: 16px;
+    border-radius: 10px;
 }
 .inputs-form{
     width: 222px;
-    margin: 0 auto;
-}
-.buttons button{
-    width: 125px;
-    font-size: 16px;
+    float: left;
+    padding: 6px;
 }
 .inputs-form input{
     margin: 10px;
     font-size: 16px;
+}
+.control-icons{
+    width: 150px;
+    box-sizing: border-box;
+    padding: 5px;
+    float: left;
+    cursor: pointer;
+}
+.ctrl-i{
+    height: 100px;
+    width: 100px;
+    padding: 0 20px;
+}
+.ctrl-i:hover{
+    height: 100px;
+    width: 100px;
+    padding: 0 20px;
+    opacity: 0.5;
+}
+.one-step{
+    float: left;
+}
+.one-step:hover{
+    opacity: 0.5;
+}
+.one-step img{
+    padding: 0 5px;
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+#chartContainer{
+    float: left;
 }

@@ -5,31 +5,41 @@
 	</head>
 	<body onload="initializeBoard()">
 
-		<canvas id="board" width="1000px" height="1000px">
+		<canvas id="board" width="700px" height="700px">
 		Your browser does not support the canvas element.
 		</canvas>
 		<div class="right">
-			<div class="plot"></div>
 			<div class="inputs">
-				<div class="inputs-form">
-					Podaj gestość początkową
-					<input type="number" placeholder="1 - 100 (%)" id="density">
-					</br>
-					S
-					<input type="text" style="width: 60px" >
-					B
-					<input type="text" style="width: 60px" >
+				<div class="controler">
+					<div class="inputs-form">
+						Podaj gestość początkową
+						<input type="number" placeholder="1 - 100 (%)" id="density">
+						Podaj reguły 
+						</br>(separowane przecinkiem)
+						</br>
+						B
+						<input type="text" style="width: 60px" value="3" id="Bval">
+						S
+						<input type="text" style="width: 60px" value="2,3" id="Sval">
+						
+						<input type="radio" name="fraction" value="" checked>Bez frakcji<br>
+						<input type="radio" name="fraction" value="1" >Z frakcjami<br>
+						<button onclick="applyInputs()">Zatwierdź zmiany</button>
+					</div>
+					<div class="control-icons">
+						<img class="ctrl-i" src='../icons/start.png' onclick="startSimulation()" title="Rozpocznij symulacje"/>
+						<img class="ctrl-i" src='../icons/pause.png' onclick="stopSimulation()" title="Zatrzymaj symulacje"/>
+						<div class="one-step" onclick="nextStep()" title="Jeden krok symulacji">
+							<img src='../icons/start.png' />
+							<img src='../icons/pause.png' />
+						</div>
+					</div>
 				</div>
-				<button onclick="applyInputs()">Zatwierdź zmiany</button>
 			</div>
-			<div class="inputs">
-				<div class="buttons">
-					<button onclick="startSimulation()">Start</button>
-					<button onclick="stopSimulation()">Stop</button>
-				</div>
-			</div>
+			<div id="chartContainer" style="height: 370px; width: 600px;"></div>
 		</div>
-		<script src="../script/draw.js" type="text/javascript"></script>
+		<script src="../script/canvasjs/canvasjs.min.js" type="text/javascript"></script>
+		<script src="../script/gameOfLife.js" type="text/javascript"></script>
 
 	</body>
 </html>
